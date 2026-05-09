@@ -22,13 +22,13 @@ const AvailableStories = () => {
             transition={{ duration: 0.35 }}
             className="dark:text-white h-full flex flex-col justify-center items-center w-full md:w-150 text-center p-3"
           >
-            <div className="border dark:border-darkmode-accent/40 border-lightmode-accent mr-3 mt-12 p-3 rounded-xl">
+            <div className="border dark:border-darkmode-accent/40 border-lightmode-accent mt-12 p-3 rounded-xl">
               <h1 className="text-left mb-10 text-3xl border-b-2 w-50 pb-4 dark:border-darkmode-accent/20 border-lightmode-accent/40 select-none">
                 {currentNode?.title}
               </h1>
               <p className="text-xs md:text-sm">{currentNode.text}</p>
             </div>
-            <div className="mt-10 p-5 md:p-2 flex justify-between w-full ">
+            <div className="mt-10 pt-5 pb-5 md:pt-2 md:pb-2 flex justify-between w-full">
               {currentNode.choices.map((choice) => (
                 <button
                   key={choice.id}
@@ -36,7 +36,7 @@ const AvailableStories = () => {
                     setDirection(1);
                     setCurrentNode(choice);
                   }}
-                  className="text-xs border border-darkmode-accent hover:border-darkmode-accent/50 hover:scale-115 transition-all ease-in-out duration-100 delay-100 cursor-pointer p-3 rounded-md text-wrap w-40 md:w-50 dark:bg-darkmode-accent bg-lightmode-accent text-white hover:dark:shadow-darkmode-accent/40 shadow-lg hover:shadow-lightmode-accent"
+                  className="text-xs border border-darkmode-accent hover:border-darkmode-accent/50 hover:scale-102 transition-all ease-in-out duration-100 delay-100 cursor-pointer p-3 rounded-md text-wrap w-40 md:w-50 dark:bg-darkmode-accent bg-lightmode-accent text-white hover:dark:shadow-darkmode-accent/40 shadow-lg hover:shadow-lightmode-accent"
                 >
                   {choice?.label}
                 </button>
